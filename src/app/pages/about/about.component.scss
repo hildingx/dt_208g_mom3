@@ -1,6 +1,7 @@
 section h1 {
     text-align: center;
     margin-top: 50px;
+    color: #333333;
 }
 
 .sections {
@@ -12,12 +13,14 @@ section h1 {
 
     h2 {
         margin-bottom: 10px;
+        color: #333333;
     }
 
     p {
         line-height: 1.4;
         width: 80%;
         max-width: 600px;
+        color: #333333;
     }
 
     &:last-of-type {
