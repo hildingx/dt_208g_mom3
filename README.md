@@ -1,27 +1,16 @@
-# Mom3Angular
+# DT208G - Moment 3 - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+Projektet initierades med installation av Angular CLI globalt genom 'npm install -g @angular/cli' och därefter skapades ett angular-projekt/mapp med 'ng new mom3-angular'. Detta satte upp strukturen för användadet av angular i projektet.
 
-## Development server
+'ng serve' kördes vilket drar igång utvecklingsservern. Därefter skapades komponenter för webbsidans struktur och för de funktioner som krävdes med 'ng generate component komponentnamn'. De komponenter som skapades blev slutligen navbar, footer, about, converter, home och not-found.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Därefter routades komponenterna i app.routes.ts genom att använda Angulars modul RouterModule med korrekt sökväg, samt för not-found för sidor som inte hittas eller är definierade. Navbar och footer är statiska komponenter som integrerares direkt i applikationens grundlayout i app.component.html med exmepelvis <app-navbar></app-navbar>. Övriga komponenter som är mer dynamiska vyer hanteras av Angulars routing-system och definierades i app.routes.ts.
 
-## Code scaffolding
+För konverteringsfunktionen implementerades templates och data binding, vilket möjliggjorde interaktiv datahantering. Användarens inmatningar i formularfält reflekterades direkt och konverterades dynamiskt med hjälp av Angulars tvåvägsbindning ([(ngModel)]). För att detta skulle vara möjligt behövdes moduler importeras, i detta fall FormsModule och CommonModule.
+I klassen ConverterComponent sattes egenskaper och metoder upp för sjävla konverteringen och kunde sedan anropas i HTML-koden.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Infogat bild med picture-element med definierade sökvägar i klassen för komponenten. Använde [srcset] och [src] så att applikationen dynamiskt kan ladda det mest effektiva formatet (.webp / .jpg) baserat på användarnes webbläsare.
 
-## Build
+Övergripande scss-styling gjordes i styles.css och sedan stylades respektive komponent utifrån dess ändamål.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Slutligen deployades sidan genom att göra ett färdigt publiceringspaket med ng build och publicerades sedan på netlify. Projektet versionshanterades med Git med globalt repo på Github.

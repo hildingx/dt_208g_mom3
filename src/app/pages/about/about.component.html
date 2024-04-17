@@ -1,39 +1,42 @@
 <section>
     <h1>Om</h1>
-    <h2>Lösning av uppgiften</h2>
-    <p>
-        Projektet initierades med installation av Angular CLI globalt genom '<em>npm install -g &#64;angular/cli</em>' och 
-        därefter skapades ett angular-projekt/mapp med '<em>ng new mom3-angular</em>'. Detta satte upp strukturen för användadet av angular i projektet.
-        <br><br>
-        '<em>ng serve</em>' kördes vilket drar igång utvecklingsservern. Därefter skapades komponenter för webbsidans struktur och för de funktioner som krävdes
-        med '<em>ng generate component komponentnamn</em>'.
-        De komponenter som skapades blev slutligen navbar, footer, about, converter, home och not-found.
-        <br><br>
-        Därefter routades komponenterna i <em>app.routes.ts</em> genom att använda Angulars modul RouterModule med korrekt sökväg, samt för not-found för sidor som inte hittas eller är definierade.
-        Navbar och footer är statiska komponenter som integrerares direkt i applikationens grundlayout i <em>app.component.html</em> med exmepelvis &lt;app-navbar&gt;&lt;/app-navbar&gt;.
-        Övriga komponenter som är mer dynamiska vyer hanteras av Angulars routing-system och definierades i <em>app.routes.ts</em>.
-        <br><br>
-        För konverteringsfunktionen implementerades templates och data binding, vilket möjliggjorde interaktiv datahantering. Användarens inmatningar i formularfält reflekterades direkt och konverterades 
-        dynamiskt med hjälp av Angulars tvåvägsbindning (<em>[(ngModel)]</em>). För att detta skulle vara möjligt behövdes moduler importeras, i detta fall <em>FormsModule</em> och <em>CommonModule</em>.
-        <br>
-        I klassen <em>ConverterComponent</em> sattes egenskaper och metoder upp för sjävla konverteringen och kunde sedan anropas i HTML-koden.
-        <br><br>
-        Infogat bild med picture-element med definierade sökvägar i klassen för komponenten. Använde <em>[srcset]</em> och <em>[src]</em> så att 
-        applikationen dynamiskt kan ladda det mest effektiva formatet (.webp / .jpg) baserat på användarnes webbläsare.
-        <br><br>
-        Övergripande scss-styling gjordes i <em>styles.css</em> och sedan stylades respektive komponent utifrån dess ändamål.
-        <br><br>
-        Slutligen deployades sidan genom att göra ett färdigt publiceringspaket med <em>ng build</em> och publicerades sedan på netlify.
-        Projektet versionshanterades med Git med globalt repo på Github.
-    </p>
-</section>
+    <section class="sections">
+        <h2>Lösning av uppgiften</h2>
+        <p>
+            Projektet initierades med installation av Angular CLI globalt genom '<em>npm install -g &#64;angular/cli</em>' och 
+            därefter skapades ett angular-projekt/mapp med '<em>ng new mom3-angular</em>'. Detta satte upp strukturen för användadet av angular i projektet.
+            <br><br>
+            '<em>ng serve</em>' kördes vilket drar igång utvecklingsservern. Därefter skapades komponenter för webbsidans struktur och för de funktioner som krävdes
+            med '<em>ng generate component komponentnamn</em>'.
+            De komponenter som skapades blev slutligen navbar, footer, about, converter, home och not-found.
+            <br><br>
+            Därefter routades komponenterna i <em>app.routes.ts</em> genom att använda Angulars modul RouterModule med korrekt sökväg, samt för not-found för sidor som inte hittas eller är definierade.
+            Navbar och footer är statiska komponenter som integrerares direkt i applikationens grundlayout i <em>app.component.html</em> med exmepelvis &lt;app-navbar&gt;&lt;/app-navbar&gt;.
+            Övriga komponenter som är mer dynamiska vyer hanteras av Angulars routing-system och definierades i <em>app.routes.ts</em>.
+            <br><br>
+            För konverteringsfunktionen implementerades templates och data binding, vilket möjliggjorde interaktiv datahantering. Användarens inmatningar i formularfält reflekterades direkt och konverterades 
+            dynamiskt med hjälp av Angulars tvåvägsbindning (<em>[(ngModel)]</em>). För att detta skulle vara möjligt behövdes moduler importeras, i detta fall <em>FormsModule</em> och <em>CommonModule</em>.
+            <br>
+            I klassen <em>ConverterComponent</em> sattes egenskaper och metoder upp för sjävla konverteringen och kunde sedan anropas i HTML-koden.
+            <br><br>
+            Infogat bild med picture-element med definierade sökvägar i klassen för komponenten. Använde <em>[srcset]</em> och <em>[src]</em> så att 
+            applikationen dynamiskt kan ladda det mest effektiva formatet (.webp / .jpg) baserat på användarnes webbläsare.
+            <br><br>
+            Övergripande scss-styling gjordes i <em>styles.css</em> och sedan stylades respektive komponent utifrån dess ändamål.
+            <br><br>
+            Slutligen deployades sidan genom att göra ett färdigt publiceringspaket med <em>ng build</em> och publicerades sedan på netlify.
+            Projektet versionshanterades med Git med globalt repo på Github.
+        </p>
+    </section>
 
-<section>
-    <h2>Slutsatser</h2>
-    <p>
-        Superkul att börja lära sig Angular! Det verkar vara ett otroligt kraftfullt verktyg som (när man lärt sig lite mer) kommer underlätta utvecklingsarbetet.
-        Jättepotenta inbyggda verktyg som kan hjälpa till att effektivisera och DRY'a koden. Jag skulle helst vilja sitta en hel kurs i Angular och lära mig ännu mer.
-        <br><br>
-        Kul att få börja nosa på SPA och hur detta kan användas.  
-    </p>
+
+    <section class="sections">
+        <h2>Slutsatser</h2>
+        <p>
+            Superkul att börja lära sig Angular! Det verkar vara ett otroligt kraftfullt verktyg som (när man lärt sig lite mer) kommer underlätta utvecklingsarbetet.
+            Jättepotenta inbyggda verktyg som kan hjälpa till att effektivisera och DRY'a koden. Jag skulle helst vilja sitta en hel kurs i Angular och lära mig ännu mer.
+            <br><br>
+            Kul att få börja nosa på SPA och hur detta kan användas.  
+        </p>
+    </section>
 </section>
