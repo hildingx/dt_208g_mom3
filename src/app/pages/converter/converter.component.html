@@ -7,30 +7,30 @@
             <label for="meter">Meter</label>
             <br>
             <input type="number" id="meter" [(ngModel)]="meter" (input)="convertToFeet()" placeholder="Ange meter">
-            <p>{{ meter }} meter är {{ feet }} fot</p>
+            <p *ngIf="feetResult !== null">{{ meter }} meter är {{ feetResult }} fot</p>
         </div>
         <div class="convert">
             <label for="feet">Fot</label>
             <br>
             <input type="number" id="feet" [(ngModel)]="feet" (input)="convertToMeter()" placeholder="Ange fot">
-            <p>{{ feet }} fot är {{ meter }} meter</p>
+            <p *ngIf="meterResult !== null">{{ feet }} fot är {{ meterResult }} meter</p>
         </div>
     </div>
-
+    
     <h2>Konvertera mellan Celsius och Fahrenheit</h2>
     <div class="convert-box">
         <div class="convert">
             <label for="celcius">Celsius</label>
             <br>
             <input type="number" id="celcius" [(ngModel)]="celsius" (input)="convertToFahrenheit()" placeholder="Ange Celsius">
-            <p>{{ celsius }} °C är {{ fahrenheit }} °F</p>
+            <p *ngIf="fahResult !== null">{{ celsius }} °C är {{ fahResult }} °F</p>
         </div>
 
         <div class="convert">
             <label for="fahrenheit">Fahrenheit</label>
             <br>
             <input type="number" id="fahrenheit" [(ngModel)]="fahrenheit" (input)="convertToCelsius()" placeholder="Ange Fahrenheit">
-            <p>{{ fahrenheit }} °F är {{ celsius }} °C</p>
+            <p *ngIf="celResult !== null">{{ fahrenheit }} °F är {{ celResult }} °C</p>
         </div>
     </div>
 </div>
