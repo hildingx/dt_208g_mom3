@@ -24,8 +24,8 @@ export class ConverterComponent {
   convertToFeet(): void {
     //Om meter inte är null
     if(this.meter != null) {
-      //Beräkna fot och avrunda till två decimaler
-      this.feetResult = Number((this.meter * 3.28084).toFixed(2));
+      //Beräkna fot
+      this.feetResult = (this.meter * 3.28084);
     } else {
       this.feetResult = null;
     }
@@ -33,7 +33,7 @@ export class ConverterComponent {
 
   convertToMeter(): void {
     if(this.feet != null) {
-      this.meterResult = Number((this.feet * 0.3048).toFixed(2));
+      this.meterResult = (this.feet * 0.3048);
     } else {
       this.meterResult = null;
     }
@@ -41,7 +41,7 @@ export class ConverterComponent {
   
   convertToFahrenheit(): void {
     if(this.celsius != null) {
-      this.fahResult = Number(((this.celsius * 9/5) + 32).toFixed(2));
+      this.fahResult = ((this.celsius * 9/5) + 32);
     } else {
       this.fahResult = null;
     }
@@ -49,7 +49,7 @@ export class ConverterComponent {
 
   convertToCelsius(): void {
     if(this.fahrenheit != null) {
-      this.celResult = Number(((this.fahrenheit - 32) * 5/9).toFixed(2));
+      this.celResult = ((this.fahrenheit - 32) * 5/9);
     } else {
       this.celResult = null;
     }

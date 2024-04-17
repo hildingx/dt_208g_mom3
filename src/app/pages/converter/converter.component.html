@@ -6,14 +6,16 @@
         <div class="convert">
             <label for="meter">Meter</label>
             <br>
+            <!-- Inputfält för meter, uppdaterar värdet och konverterar till fot vid varje inmatning genom metoden 'convertToFeet' -->
             <input type="number" id="meter" [(ngModel)]="meter" (input)="convertToFeet()" placeholder="Ange meter">
-            <p *ngIf="feetResult !== null">{{ meter }} meter är {{ feetResult }} fot</p>
+            <!-- Visar resultatet om det finns ett värde i feetResult, formaterat med max 2 decimaler -->
+            <p *ngIf="feetResult !== null">{{ meter }} meter är {{ feetResult | number:'1.0-2' }} fot</p>
         </div>
         <div class="convert">
             <label for="feet">Fot</label>
             <br>
             <input type="number" id="feet" [(ngModel)]="feet" (input)="convertToMeter()" placeholder="Ange fot">
-            <p *ngIf="meterResult !== null">{{ feet }} fot är {{ meterResult }} meter</p>
+            <p *ngIf="meterResult !== null">{{ feet }} fot är {{ meterResult | number:'1.0-2' }} meter</p>
         </div>
     </div>
     
@@ -23,14 +25,14 @@
             <label for="celcius">Celsius</label>
             <br>
             <input type="number" id="celcius" [(ngModel)]="celsius" (input)="convertToFahrenheit()" placeholder="Ange Celsius">
-            <p *ngIf="fahResult !== null">{{ celsius }} °C är {{ fahResult }} °F</p>
+            <p *ngIf="fahResult !== null">{{ celsius }} °C är {{ fahResult | number:'1.0-2' }} °F</p>
         </div>
 
         <div class="convert">
             <label for="fahrenheit">Fahrenheit</label>
             <br>
             <input type="number" id="fahrenheit" [(ngModel)]="fahrenheit" (input)="convertToCelsius()" placeholder="Ange Fahrenheit">
-            <p *ngIf="celResult !== null">{{ fahrenheit }} °F är {{ celResult }} °C</p>
+            <p *ngIf="celResult !== null">{{ fahrenheit }} °F är {{ celResult | number:'1.0-2' }} °C</p>
         </div>
     </div>
 </div>
