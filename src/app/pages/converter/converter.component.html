@@ -1,3 +1,36 @@
-<h2>Konvertera</h2>
+<div class="convert-wrapper">
+    <h1>Konvertera</h1>
 
-<p>Här kan vi konvertera enheter</p>
+    <h2>Konvertera mellan meter och fot</h2>
+    <div class="convert-box">
+        <div class="convert">
+            <label for="meter">Meter</label>
+            <br>
+            <input type="number" id="meter" [(ngModel)]="meter" (input)="convertToFeet()" placeholder="Ange meter">
+            <p>{{ meter }} meter är {{ feet }} fot</p>
+        </div>
+        <div class="convert">
+            <label for="feet">Fot</label>
+            <br>
+            <input type="number" id="feet" [(ngModel)]="feet" (input)="convertToMeter()" placeholder="Ange fot">
+            <p>{{ feet }} fot är {{ meter }} meter</p>
+        </div>
+    </div>
+
+    <h2>Konvertera mellan Celsius och Fahrenheit</h2>
+    <div class="convert-box">
+        <div class="convert">
+            <label for="celcius">Celsius</label>
+            <br>
+            <input type="number" id="celcius" [(ngModel)]="celsius" (input)="convertToFahrenheit()" placeholder="Ange Celsius">
+            <p>{{ celsius }} °C är {{ fahrenheit }} °F</p>
+        </div>
+
+        <div class="convert">
+            <label for="fahrenheit">Fahrenheit</label>
+            <br>
+            <input type="number" id="fahrenheit" [(ngModel)]="fahrenheit" (input)="convertToCelsius()" placeholder="Ange Fahrenheit">
+            <p>{{ fahrenheit }} °F är {{ celsius }} °C</p>
+        </div>
+    </div>
+</div>
