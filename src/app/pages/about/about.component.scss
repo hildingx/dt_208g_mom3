@@ -1,7 +1,21 @@
-.about-wrapper {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
     margin-top: 50px;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 1.4;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 60px;
+    }
 }
