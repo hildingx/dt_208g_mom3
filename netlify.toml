@@ -1,0 +1,9 @@
+[build]
+base = "/"
+command = "ng build"
+publish = "dist/mom3-angular/browser"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
